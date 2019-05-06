@@ -52,7 +52,7 @@ execute_process(COMMAND ${LLVM_CONFIG} "--cxxflags"
                 OUTPUT_VARIABLE LLVM_CXXFLAGS
                 OUTPUT_STRIP_TRAILING_WHITESPACE)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${LLVM_CXXFLAGS} -Wall -std=c++11")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror -Wno-gnu-anonymous-struct -Wno-nested-anon-types -Wno-c99-extensions -Wno-extended-offsetof")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror -Wno-gnu-anonymous-struct -Wno-nested-anon-types -Wno-c99-extensions -Wno-address-of-packed-member")
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -g -O2")
 
 add_subdirectory(src)
